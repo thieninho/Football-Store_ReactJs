@@ -10,7 +10,7 @@ import Login from '../pages/Login';
 import Register from '../pages/Register';
 const Routers = () => {
   return <Routes>
-    <Route path='/' element={<Navigate to=' /home'/>}/>
+    <Route path='/' element={<Navigate to='/home'/>}/>
     <Route path='/home' element={<Home/>}/>
     <Route path='/kits' element={<AllKits/>}/>
     <Route path='/kits/:id' element={<KitDetails/>}/>

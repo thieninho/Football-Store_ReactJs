@@ -26,12 +26,12 @@ import product_06_image_03 from "../images/bread(3).jpg";
 const products = [
   {
     id: "01",
-    title: "Chicken Burger",
+    title: "Barcelona Kits",
     price: 24.0,
     image01: product_01_image_01,
     image02: product_01_image_02,
     image03: product_01_image_03,
-    category: "Burger",
+    category: "Club Kits",
 
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque. ",
   },
