@@ -1,0 +1,55 @@
+.feature__subtitle {
+    color: #df2020;
+}
+
+.feature__title span {
+    color: #df2020;
+}
+.feature__text{
+    color: #777;
+}
+
+.feature__item:hover{
+    transform: scale(1.105);
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+
+
+.kits__category{
+    background: #212245;
+    text-align: center;
+    margin-top: 30px;
+    padding: 20px 0px;
+    border-radius: 8px;
+}
+.kits__category button {
+    border: none;
+    outline: none;
+    padding: 7px 20px;
+    background: transparent;
+    color: #fff;
+    transition: 0.4s;
+}
+
+.kits__category button:hover{
+    transform: scale(1.125);
+}
+
+.kits__category button img{
+    width: 20%;
+    height: 20%;
+}
+.kitsBtnActive{
+    background: #fff !important;
+    border-radius: 5px;
+    color: #212245 !important;
+}
+
+.kitsBtnActive:hover{
+    border: 2px solid #fff;
+    color: #fff !important;
+    background: #212245 !important;
+}
+

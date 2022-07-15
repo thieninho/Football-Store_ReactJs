@@ -59,7 +59,7 @@ const Footer = () => {
       <Row className='mt-5'>
         <Col lg='6' md='6'>
           <p className='copyright__text'>
-            Nocopyright - 2022, made by Thieninho. All Right Reserved.
+            Copyright - 2022, made by Thieninho. All Right Reserved.
           </p>
         </Col>
         <Col lg='6' md='6'>

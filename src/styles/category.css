@@ -1,0 +1,13 @@
+.category__item{
+    background: #212245;
+    padding: 20px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.category__item:hover {
+    transform: translateY(-15px);
+}
+.category__item h6{
+    color: #fff;
+}

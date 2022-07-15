@@ -5,6 +5,14 @@
 }
 .logo{
     text-align: center;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.logo:hover{
+   transform: translateY(10px);
+   transition: 0.5s ease-in;
+   cursor: pointer;
+
 }
 
 .logo img{

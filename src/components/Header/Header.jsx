@@ -31,7 +31,7 @@ const Header = () => {
       <div className="nav__wrapper d-flex align-items-center justify-content-between">
         <div className='logo'>
           <img src= {logo} alt="logo" />
-            <h5>77 Football Store</h5>
+            <h5>7763 Football</h5>
         </div>
 
         {/* ==Menu== */}
