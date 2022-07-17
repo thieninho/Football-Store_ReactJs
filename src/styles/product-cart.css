@@ -1,19 +1,22 @@
 .product__item {
-    border: 1px solid #212245;
+    border: 0px solid #212245;
     text-align: center;
     padding: 30px;
     cursor: pointer;
-    border-radius: 7px;
+    /* border-radius: 7px; */
 }
 
 .product__img {
+    border-radius:50%;
+-moz-border-radius:50%;
+-webkit-border-radius:50%;
     margin-bottom: 20px;
     transition: 0.4s;
-    border-radius: 10px;
 }
 
 .product__img:hover{
     transform: scale(1.125);
+
 }
 
 .product__content h5 a {

@@ -1,5 +1,5 @@
 
- import React from 'react'
+ import React, { useState, useEffect } from 'react';
  import Helmet from '../components/Helmet/Helmet.js';
  import { Container, Row, Col } from 'reactstrap';
  import heroImg from '../assets/images/hero.svg';
@@ -12,9 +12,9 @@
  import featureImg03 from '../assets/images/servive-03.png';
 
  import products from '../assets/fake-data/products.js';
- import foodCategoryImg01 from '../assets/images/category-01.png';
- import foodCategoryImg02 from '../assets/images/category-02.png';
- import foodCategoryImg03 from '../assets/images/category-04.png';
+ import kitsCategoryImg01 from '../assets/images/category-01.png';
+ import kitsCategoryImg02 from '../assets/images/category-02.png';
+ import kitsCategoryImg03 from '../assets/images/category-04.png';
 
 import ProductCard from '../components/UI/product-cart/ProductCard.jsx';
  const featureData = [
@@ -36,6 +36,28 @@ import ProductCard from '../components/UI/product-cart/ProductCard.jsx';
 
  
  const Home = () => {
+
+  const [category, setCategory] = useState('ALL')
+  const [allProducts, setAllProducts] = useState(products)
+
+  useEffect(() => {
+    if(category === 'ALL'){
+      setAllProducts(products)
+    }
+    if(category === 'CLUB KITS'){
+      const filteredProducts = products.filter(item=> item.category === 'Club Kits')
+      setAllProducts(filteredProducts)
+    }
+    if(category === 'NATION KITS'){
+      const filteredProducts = products.filter(item=> item.category === 'Nation Kits')
+      setAllProducts(filteredProducts)
+    }
+    if(category === 'WINDBREAKER'){
+      const filteredProducts = products.filter(item=> item.category === 'Windbreaker')
+      setAllProducts(filteredProducts)
+    }
+  }
+  )
    return <Helmet title="Home">
     <section>
       <Container>
@@ -110,13 +132,13 @@ import ProductCard from '../components/UI/product-cart/ProductCard.jsx';
 
           <Col lg='12'>
             <div className="kits__category d-flex align-items-center justify-content-center gap-5">
-              <button className='all__btn kitsBtnActive '>All</button>
-              <button className='d-flex align-items-center gap-2'><img src={foodCategoryImg01} alt='' />Club Kits</button>
-              <button className='d-flex align-items-center gap-2'><img src={foodCategoryImg02} alt='' />Nation Kits</button>
-              <button className='d-flex align-items-center gap-2'><img src={foodCategoryImg03} alt='' />Windbreaker</button>
+              <button className={`all__btn ${category === 'ALL'} ? 'kitsBtnActive' : ''`} onClick={()=>setCategory('ALL')}>All</button>
+              <button className={`d-flex align-items-center gap-2 ${category ==='CLUB KITS' ? 'kitsBtnActive' : ''}`} onClick={()=>setCategory('CLUB KITS')}><img src={kitsCategoryImg01} alt='' />Club Kits</button>
+              <button className={`d-flex align-items-center gap-2 ${category ==='NATION KITS' ? 'kitsBtnActive' : ''}`} onClick={()=>setCategory('NATION KITS')}><img src={kitsCategoryImg02} alt='' />Nation Kits</button>
+              <button className={`d-flex align-items-center gap-2 ${category ==='WINDBREAKER' ? 'kitsBtnActive' : ''}`} onClick={()=>setCategory('WINDBREAKER')}><img src={kitsCategoryImg03} alt='' />Windbreaker</button>
             </div>
           </Col>
-          {products.map((item) => ( 
+          {allProducts.map((item) => ( 
           <Col lg='4' md='6' key={item.id} className='mt-5'>
             <ProductCard item={item} />
           </Col>

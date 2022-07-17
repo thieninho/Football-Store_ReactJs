@@ -1,12 +1,12 @@
 .category__item{
     background: #212245;
-    padding: 20px 20px;
+    padding: 10px 10px;
     border-radius: 5px;
     cursor: pointer;
     transition: 0.5s;
 }
 .category__item:hover {
-    transform: translateY(-15px);
+    transform: translateY(-10px);
 }
 .category__item h6{
     color: #fff;

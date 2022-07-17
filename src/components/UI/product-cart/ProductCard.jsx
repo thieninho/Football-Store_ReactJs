@@ -11,7 +11,7 @@ const ProductCard = (props) => {
         <img src={image01} alt='product-img' className='w-100'/>
       </div>
       <div className="product__content">
-        <h5><Link to={`/food/${id}`}> {title} </Link></h5>
+        <h5><Link to={`/kits/${id}`}> {title} </Link></h5>
         <div className='d-flex align-items-center justify-content-between'>
           <span className="product__price">{price}$</span>
           <button className="addToCart__btn">Add to Cart</button>
